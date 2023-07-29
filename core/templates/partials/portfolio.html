@@ -1,0 +1,25 @@
+{%load static%}
+<section>
+    <header class="major">
+        <h2>My Portfolio</h2>
+    </header>
+    <div class="row">
+        {%for post in postsC%}
+        <div class="col-4 col-6-medium col-12-small">
+            <section class="box">
+                <a href="#" class="image featured"><img src="{{post.miniatura.thumbnail.url}}" alt="" /></a>
+                <header>
+                    <h3>{{post.titulo}}</h3>
+                </header>
+                <p>{{post.resumo}}</p>
+                <footer>
+                    <ul class="actions">
+                        <li><a href="{% url 'materia' slug=post.slug %}" class="button alt">Ler sobre</a></li>
+
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        {% endfor %}
+    </div>
+</section>

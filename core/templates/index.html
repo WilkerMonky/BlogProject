@@ -1,0 +1,40 @@
+{%extends 'partials/base.html'%}
+{%load static%}
+
+<!------------------------------------------------------Cortar----------------------->
+{%block content%}
+					<!-- Banner -->
+				{%include 'partials/banner.html'%}
+
+					<!-- Intro -->
+				{%include 'partials/intro.html'%}
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+
+								<!-- Portfolio -->
+								{%include 'partials/portfolio.html' %}
+
+							</div>
+							<div class="col-12">
+
+								<!-- Blog -->
+								{%include 'partials/blog.html'%}
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+
+				{%include 'partials/rodape.html'%}
+		</div>
+
+
+	</body>
+</html>
+{%endblock%}
