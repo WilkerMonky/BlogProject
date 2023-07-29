@@ -1,7 +1,13 @@
 from django.contrib import admin
-from .models import PostModel
+from .models import PostModel, TopicoModel
 
 @admin.register(PostModel)
-class PostCuriosidadeAdmin(admin.ModelAdmin):
+class PostAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'criacao','ativo')
+    exclude = ('slug',)
+
+
+@admin.register(TopicoModel)
+class TopicoAdmin(admin.ModelAdmin):
+    list_display=('nome', 'criacao', 'ativo')
     exclude = ('slug',)
